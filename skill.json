@@ -1,0 +1,39 @@
+{
+  "name": "genpark-realtime-audio-diarization-speaker-assigner-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Realtime multi-party audio transcript diarization and acoustic speaker assignment with millisecond timestamp tagging.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "audio-processing",
+  "tags": [
+    "audio-diarization",
+    "deepgram-style",
+    "speaker-identification",
+    "voice-transcription",
+    "acoustic-embeddings"
+  ],
+  "inputs": {
+    "audio_chunk_pcm_base64": {
+      "type": "string"
+    },
+    "active_speakers_roster": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "diarization_event_id": {
+      "type": "string"
+    },
+    "identified_speaker_id": {
+      "type": "string"
+    },
+    "transcribed_speech_text": {
+      "type": "string"
+    },
+    "multi_speaker_timeline_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
